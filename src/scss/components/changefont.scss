@@ -1,0 +1,79 @@
+.change-font-buttons {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(10);
+    width: fit-content;
+
+    &__button {
+        @include wh(rem(25), rem(25));
+
+        border-radius: 50%;
+        color: $color-FFFFFF;
+        background-color: $color-8000FF;
+        transition: all 0.3s ease 0s;
+
+        &.active {
+            color: $color-000000;
+            background-color: $color-FFE600;
+        }
+
+        &--low {
+            @include wh(rem(30), rem(30));
+        }
+
+        &--big {
+            @include wh(rem(35), rem(35));
+        }
+    }
+}
+
+[data-change-font-item] {
+    transition: all 0.3s ease 0s;
+}
+
+.change-font-range {
+    display: flex;
+    gap: rem(15);
+    width: fit-content;
+
+    &__range {
+        appearance: none;
+        width: rem(100);
+        background: transparent;
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            border-radius: 50%;
+            width: rem(9);
+            height: rem(9);
+            background: $color-8000FF;
+            cursor: pointer;
+        }
+
+        &::-webkit-slider-runnable-track {
+            border: rem(2) solid $color-8000FF;
+            border-radius: rem(40);
+            padding: rem(1);
+            height: rem(15);
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__value {
+        $font-size: 14;
+
+        @include wh(rem(25), rem(25));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: rem($font-size);
+        color: $color-FFFFFF;
+        background-color: $color-8000FF;
+    }
+}

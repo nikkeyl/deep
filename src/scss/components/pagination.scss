@@ -1,0 +1,25 @@
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__arrow {
+    }
+
+    &__list {
+        display: flex;
+
+        li {
+        }
+    }
+
+    &__item {
+        &.active {
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
+}

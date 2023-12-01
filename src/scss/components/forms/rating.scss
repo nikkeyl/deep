@@ -1,0 +1,66 @@
+.rating {
+    display: flex;
+    align-items: flex-end;
+    font-size: rem(40);
+    line-height: 0.75;
+    transition: opacity 0.3s ease 0s;
+
+    &__body {
+        position: relative;
+
+        &::before {
+            content: "★★★★★";
+            display: block;
+        }
+    }
+
+    &__active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        width: 0%;
+        height: 100%;
+        transition: all 0.2s ease 0s;
+
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: $color-FFE600;
+        }
+    }
+
+    &__items {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__value {
+        padding: 0 0 0 rem(10);
+        font-size: 50%;
+        line-height: 1;
+    }
+
+    &--sending {
+        opacity: 0.2;
+    }
+
+    &--set .rating__active,
+    &--set .rating__item {
+        cursor: pointer;
+    }
+}

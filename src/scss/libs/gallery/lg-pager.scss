@@ -1,0 +1,103 @@
+@import "lg-variables";
+@import "lg-mixins";
+
+.lg-outer {
+    .lg-pager-outer {
+        z-index: $zindex-pager;
+        margin-bottom: 0.625rem;
+        height: 0.625rem;
+        text-align: center;
+
+        &.lg-pager-hover {
+            .lg-pager-cont {
+                overflow: visible;
+            }
+        }
+    }
+
+    .lg-pager-cont {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+        margin: 0 0.313rem;
+        cursor: pointer;
+
+        &.lg-pager-active {
+            .lg-pager {
+                box-shadow: 0 0 0 0.125rem #fff inset;
+            }
+        }
+
+        &:hover {
+            .lg-pager-thumb-cont {
+                @include translate3d(0, 0, 0);
+
+                opacity: 1;
+            }
+        }
+    }
+
+    .lg-pager-thumb-cont {
+        @include transitionCustom(
+            opacity 0.15s ease 0s,
+            transform 0.15s ease 0s
+        );
+        @include translate3d(0, 0.313rem, 0);
+
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        margin-bottom: 1.25rem;
+        margin-left: -3.75rem;
+        border-radius: 0.188rem;
+        padding: 0.313rem;
+        width: 7.5rem;
+        height: 5.188rem;
+        color: #fff;
+        background-color: #fff;
+        opacity: 0;
+        will-change: transform, opacity;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .lg-pager {
+        @include transition(box-shadow 0.3s ease 0s);
+
+        display: block;
+        border-radius: 50%;
+        width: 0.75rem;
+        height: 0.75rem;
+        box-shadow: 0 0 0 0.5rem rgb(255 255 255 / 70%) inset;
+        background-color: rgb(255 255 255 / 50%);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 0 0.5rem #fff inset;
+        }
+    }
+
+    .lg-caret {
+        position: absolute;
+        left: 50%;
+        bottom: -0.625rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -0.313rem;
+        border-top: 0.625rem dashed;
+        border-right: 0.625rem solid transparent;
+        border-left: 0.625rem solid transparent;
+        width: 0;
+        height: 0;
+    }
+
+    &.lg-single-item {
+        .lg-pager-outer {
+            display: none;
+        }
+    }
+}

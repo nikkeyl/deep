@@ -1,0 +1,35 @@
+[data-showmore] {
+    display: flex;
+    flex-direction: column;
+}
+
+[data-showmore-content] {
+}
+
+[data-showmore-button] {
+    display: inline-flex;
+    align-self: center;
+    margin-top: rem(10);
+    border: rem(1) solid $color-000000;
+    border-radius: rem(3);
+    padding: rem(5) rem(10);
+
+    span {
+        &:last-child {
+            display: none;
+        }
+
+        .showmore-active & {
+            display: none;
+
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+        }
+    }
+}

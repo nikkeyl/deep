@@ -1,0 +1,194 @@
+.text {
+    font-size: rem(20);
+    line-height: math.div(32, 20);
+    color: $color-FFFFFF;
+
+    &--transparent-white {
+        color: $color-FFFFFF8;
+    }
+
+    &--blue {
+        color: $color-100C468;
+    }
+}
+
+//========================================================================================================================================================//
+.title {
+    max-width: rem(400);
+
+    &__label {
+        $font-size: 16;
+
+        line-height: math.div(22, $font-size);
+        color: $color-6257FE;
+
+        &:not(:last-child) {
+            margin-bottom: em(7, $font-size);
+        }
+    }
+
+    &__value {
+        $font-size: 56;
+
+        font-family: $font-overpass;
+        font-size: rem($font-size);
+        line-height: math.div(71, $font-size);
+        color: $color-100C46;
+    }
+
+    &--white {
+        .title__value,
+        .title__label {
+            color: $color-FFFFFF;
+        }
+    }
+
+    &--blue {
+        .title__value {
+            color: $color-6257FE;
+        }
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
+
+//========================================================================================================================================================//
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(300);
+
+    &__image-ibg {
+        padding-bottom: percent(405, 300);
+        background-color: $color-100C46;
+    }
+}
+
+//========================================================================================================================================================//
+.team-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: rem(300);
+
+    &__image-ibg {
+        padding-bottom: percent(405, 300);
+        background-color: $color-6257FE;
+    }
+
+    &__body {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(10);
+        padding: rem(11) rem(15);
+        width: 100%;
+        background-color: rgb(98 87 254 / 80%);
+    }
+
+    &__info {
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: math.div(32, 16);
+        color: $color-FFFFFF;
+    }
+
+    &__profession {
+        font-size: rem(14);
+        line-height: math.div(32, 14);
+        color: $color-FFFFFF;
+    }
+
+    &__socials {
+    }
+}
+
+//========================================================================================================================================================//
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(25);
+    padding: rem(21) rem(23);
+    width: fit-content;
+    background-color: $color-6257FE;
+
+    &__icon {
+        svg {
+            @include wh(rem(21), rem(21));
+
+            fill: $color-FFFFFF;
+            transition: fill 0.3s ease;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    fill: $color-100C46;
+                }
+            }
+        }
+    }
+
+    &--small {
+        gap: rem(13);
+        padding: 0;
+        width: fit-content;
+        background-color: transparent;
+    }
+}
+
+//========================================================================================================================================================//
+.service-item {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(295);
+
+    &__icon {
+        @include wh(rem(40), rem(40));
+
+        flex: 0 0 rem(40);
+        fill: none;
+        stroke: $color-100C46;
+
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-left: rem(89);
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: math.div(32, 22);
+        color: $color-100C46;
+
+        &::before {
+            @include pseudo;
+
+            left: 0;
+            top: 50%;
+            width: rem(77);
+            height: rem(1);
+            background-color: $color-100C46;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: em(22, 22);
+        }
+    }
+
+    &__text {
+    }
+}
+
+.logo {
+    @include wh(rem(92), rem(40));
+}

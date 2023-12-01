@@ -1,0 +1,161 @@
+@import "lg-variables";
+@import "lg-mixins";
+
+.lg-outer {
+    .lg-dropdown-overlay {
+        @include transition(
+            visibility 0s linear 0.18s,
+            opacity 0.18s linear 0s
+        );
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: $zindex-toolbar - 1;
+        background-color: rgb(0 0 0 / 25%);
+        opacity: 0;
+        visibility: hidden;
+        will-change: visibility, opacity;
+        cursor: default;
+    }
+
+    .lg-dropdown {
+        @include transform(translate3d(0, 0.313rem, 0));
+        @include transitionCustom(
+            transform 0.18s linear 0s,
+            visibility 0s linear 0.5s,
+            opacity 0.18s linear 0s
+        );
+
+        position: absolute;
+        right: 0;
+        top: 3.125rem;
+        list-style-type: none;
+        margin: 0;
+        border-radius: 0.125rem;
+        padding: 0.625rem 0;
+        font-size: 0.875rem;
+        text-align: left;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        will-change: visibility, opacity, transform;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 1rem;
+            top: -1rem;
+            display: block;
+            border: 0.5rem solid transparent;
+            border-bottom-color: #fff;
+            width: 0;
+            height: 0;
+        }
+
+        > li {
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                a {
+                    color: #333;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            padding: 0.25rem 0.75rem;
+            font-family:
+                "Open Sans",
+                "Helvetica Neue",
+                "Helvetica",
+                "Arial",
+                sans-serif;
+            font-size: 0.75rem;
+            white-space: pre;
+            color: #333;
+
+            &:hover {
+                background-color: rgb(0 0 0 / 7%);
+            }
+        }
+
+        .lg-dropdown-text {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -0.188rem;
+            line-height: 1;
+        }
+
+        .lg-icon {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            padding: 0;
+            width: auto;
+            height: auto;
+            font-size: 1.25rem;
+            line-height: 1;
+            color: #333;
+        }
+    }
+
+    .lg-share {
+        position: relative;
+
+        &::after {
+            content: "\e80d";
+        }
+    }
+
+    .lg-share-facebook {
+        .lg-icon {
+            color: #3b5998;
+
+            &::after {
+                content: "\e904";
+            }
+        }
+    }
+
+    .lg-share-twitter {
+        .lg-icon {
+            color: #00aced;
+
+            &::after {
+                content: "\e907";
+            }
+        }
+    }
+
+    .lg-share-pinterest {
+        .lg-icon {
+            color: #cb2027;
+
+            &::after {
+                content: "\e906";
+            }
+        }
+    }
+
+    &.lg-dropdown-active {
+        .lg-dropdown,
+        .lg-dropdown-overlay {
+            @include transition-delay(0s);
+            @include transform(translate3d(0, 0, 0));
+
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lg-share {
+            color: #fff;
+        }
+    }
+}

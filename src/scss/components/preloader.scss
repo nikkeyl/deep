@@ -1,0 +1,66 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: $color-000000;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease 0s;
+
+    &__loader {
+        @include wh(rem(100), rem(100));
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: rem(10) solid $color-FFFFFF;
+        border-top-color: $color-8000FF;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: spin 2s linear infinite;
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    }
+
+    &__prc {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        color: $color-FFFFFF;
+        transform: translate(-50%, -50%);
+    }
+
+    &__track {
+        @include wh(rem(100), rem(5));
+
+        position: relative;
+        border-radius: rem(10);
+        background-color: rgb(92 92 92);
+
+        &::before {
+            @include pseudo;
+
+            border-radius: rem(10);
+            width: 0;
+            height: rem(5);
+            background-color: $color-8000FF;
+        }
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,47 @@
+@import "lg-variables";
+@import "lg-mixins";
+
+.lg-progress-bar {
+    @include transitionCustom(opacity 0.08s ease 0s);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: $zindex-progressbar;
+    width: 100%;
+    height: $lg-progress-bar-height;
+    background-color: $lg-progress-bar-bg;
+    opacity: 0;
+    will-change: opacity;
+
+    .lg-progress {
+        width: 0;
+        height: $lg-progress-bar-height;
+        background-color: $lg-progress-bar-active-bg;
+    }
+
+    &.lg-start {
+        .lg-progress {
+            width: 100%;
+        }
+    }
+
+    .lg-show-autoplay & {
+        opacity: 1;
+    }
+}
+
+.lg-autoplay-button {
+    &::after {
+        content: "\e01d";
+
+        .lg-show-autoplay & {
+            content: "\e01a";
+        }
+    }
+
+    .lg-single-item & {
+        opacity: $lg-toolbar-icon-disabled-opacity;
+        pointer-events: none;
+    }
+}

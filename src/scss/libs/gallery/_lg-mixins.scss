@@ -1,0 +1,202 @@
+@use "sass:list";
+
+@mixin animation($animation) {
+    animation: $animation;
+}
+
+@mixin animation-name($name) {
+    animation-name: $name;
+}
+
+@mixin animation-duration($duration) {
+    animation-duration: $duration;
+}
+
+@mixin animation-timing-function($timing-function) {
+    animation-timing-function: $timing-function;
+}
+
+@mixin animation-delay($delay) {
+    animation-delay: $delay;
+}
+
+@mixin animation-iteration-count($iteration-count) {
+    animation-iteration-count: $iteration-count;
+}
+
+@mixin animation-direction($direction) {
+    animation-direction: $direction;
+}
+
+@mixin animation-fill-mode($fill-mode) {
+    animation-fill-mode: $fill-mode;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin backface-visibility($visibility) {
+    backface-visibility: $visibility;
+}
+
+@mixin box-shadow($shadow...) {
+    box-shadow: $shadow;
+}
+
+@mixin box-sizing($boxmodel) {
+    box-sizing: $boxmodel;
+}
+
+@mixin content-columns($column-count, $column-gap: $grid-gutter-width) {
+    column-count: $column-count;
+    column-gap: $column-gap;
+}
+
+@mixin hyphens($mode: auto) {
+    word-wrap: break-word;
+    hyphens: $mode;
+}
+
+@mixin scale($ratio...) {
+    transform: scale($ratio);
+}
+
+@mixin scaleX($ratio) {
+    transform: scaleX($ratio);
+}
+
+@mixin scaleY($ratio) {
+    transform: scaleY($ratio);
+}
+
+@mixin skew($x, $y) {
+    transform: skewX($x) skewY($y);
+}
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+}
+
+@mixin translate3d($x, $y, $z) {
+    transform: translate3d($x, $y, $z);
+}
+
+@mixin scale3d($x, $y, $z) {
+    transform: scale3d($x, $y, $z);
+}
+
+@mixin rotate($degrees) {
+    transform: rotate($degrees);
+}
+
+@mixin rotateX($degrees) {
+    transform: rotateX($degrees);
+}
+
+@mixin rotateY($degrees) {
+    transform: rotateY($degrees);
+}
+
+@mixin perspective($perspective) {
+    perspective: $perspective;
+}
+
+@mixin perspective-origin($perspective) {
+    perspective-origin: $perspective;
+}
+
+@mixin transform-origin($origin) {
+    transform-origin: $origin;
+}
+
+@mixin transform($transforms) {
+    transform: $transforms;
+}
+
+@mixin transition($transition...) {
+    transition: $transition;
+}
+
+@mixin transition-property($transition-property...) {
+    transition-property: $transition-property;
+}
+
+@mixin transition-delay($transition-delay) {
+    transition-delay: $transition-delay;
+}
+
+@mixin transition-duration($transition-duration...) {
+    transition-duration: $transition-duration;
+}
+
+@mixin transition-timing-function($timing-function) {
+    transition-timing-function: $timing-function;
+}
+
+@mixin transition-transform($transition...) {
+    transition: transform $transition;
+}
+
+@function prefix($property, $prefixes: webkit moz o) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+
+    @each $prefix in $prefixes {
+        @if index($vendor-prefixed-properties, $property) {
+            $property: -#{$prefix}-#{$property};
+        }
+
+        $result: list.append($result, $property);
+    }
+
+    @return $result;
+}
+
+@function trans-prefix($transition, $prefix: moz) {
+    $prefixed: ();
+
+    @each $trans in $transition {
+        $prop-name: list.nth($trans, 1);
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prop-vals: list.nth($trans, 2);
+        $prefixed: list.append($prefixed, $vendor-prop-name $prop-vals, comma);
+    }
+
+    @return $prefixed;
+}
+
+@mixin transitionCustom($values...) {
+    $transitions: ();
+
+    transition: $values;
+
+    @each $declaration in $values {
+        $prop: list.nth($declaration, 1);
+        $prop-opts: ();
+        $length: list.length($declaration);
+
+        @if $length >= 2 {
+            @for $i from 2 through $length {
+                $prop-opts: list.append($prop-opts, list.nth($declaration, $i));
+            }
+        }
+
+        $trans: $prop, $prop-opts;
+        $transitions: list.append($transitions, $trans, comma);
+    }
+}
+
+@mixin user-select($select) {
+    user-select: $select;
+}
+
+@mixin grab-cursor {
+    cursor: grab;
+}
+
+@mixin grabbing-cursor {
+    cursor: grabbing;
+}

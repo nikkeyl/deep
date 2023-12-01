@@ -1,0 +1,54 @@
+.button {
+    display: inline-flex;
+    border-radius: rem(3);
+    padding: rem(19) rem(46);
+    box-shadow: 0 rem(10) rem(50) rgb(0 0 0 / 30%);
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(32, 18);
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-100C46;
+    background-color: $color-FFFFFF;
+
+    // transition: all 0.3s ease;
+
+    &:active {
+        transform: translateY(rem(3));
+    }
+
+    &--blue {
+        box-shadow: 0 rem(10) rem(30) rgb(98 87 254 / 30%);
+        color: $color-FFFFFF;
+        background: $color-6257FE;
+    }
+
+    &--up {
+        padding: rem(23);
+        background-color: $color-6257FE;
+        transition: all 0.3s ease;
+
+        svg {
+            @include wh(rem(24), rem(24));
+
+            fill: none;
+            stroke: $color-FFFFFF;
+            transition: all 0.3s ease;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: translateY(rem(-3));
+                }
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $color-FFFFFF;
+            background-color: $color-100C46;
+        }
+    }
+}

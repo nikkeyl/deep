@@ -1,0 +1,31 @@
+$max-width-container    : 1270;
+$container-padding      : 30;
+//---------------------------------//
+$max-width              : 1440;
+$min-width              : 320;
+//---------------------------------//
+$container-width        : $max-width-container + $container-padding;
+$pc                     : $container-width;
+$tablet                 : 992;
+$mobile                 : 768;
+$mobile-small           : 480;
+//---------------------------------//
+$main-font-family       : 'Open Sans';
+$main-font-weight       : 400;
+$main-font-size         : 20;
+$font-overpass          : 'Overpass';
+$main-background-color  :#FFF;
+$main-font-color        :#000;
+$a-focus-active-outline : 0;
+$focus-active-outline   : 1;
+//---------------------------------//
+$color-000000           :#000;
+$color-FFFFFF           :#FFF;
+$color-FFFFFF8          :rgba(255, 255, 255, 0.8);
+
+$color-100C46           :#100C46;
+$color-100C468           :rgba(16, 12, 70, 0.8);
+$color-6257FE           :#6257FE;
+$color-F4F3FF           :#F4F3FF;
+$color-6257FE4          :rgba(98, 87, 254, 0.4);
+$color-6257FE8          :rgba(98, 87, 254, 0.8);

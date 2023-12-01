@@ -1,0 +1,47 @@
+.dark {
+    body {
+        color: #FFF;
+        background-color: #333;
+    }
+
+    .theme-change {
+        background: url("@content/icons/sprite.svg#svg-") 0 0 no-repeat;
+    }
+}
+
+.light {
+    body {
+        color: #333;
+        background-color: #FFF;
+    }
+
+    .theme-change {
+        background: url("@content/icons/sprite.svg#svg-") 0 0 no-repeat;
+    }
+}
+
+.theme-change {
+    @include wh(rem(30), rem(30));
+
+    transition: all 0.6s ease 0s;
+}
+
+.reset-theme {
+    @include wh(rem(15), rem(15));
+
+    border-radius: 50%;
+    font-size: rem(10);
+    color: $color-FFFFFF;
+    background-color: #F00;
+    opacity: 0;
+    visibility: hidden;
+
+    &::before {
+        content: "X";
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

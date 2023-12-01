@@ -1,0 +1,28 @@
+.tabs {
+    &__navigation {
+        display: flex;
+    }
+
+    &__title {
+        border: rem(1) solid #EEE;
+        border-radius: rem(5);
+        padding: rem(10) rem(15);
+
+        &.tab-active {
+            border: rem(1) solid $color-000000;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
+
+    &__content {
+        border: rem(1) solid #EEE;
+        padding: rem(10) rem(15);
+    }
+
+    &__body {
+    }
+}

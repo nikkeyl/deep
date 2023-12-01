@@ -1,0 +1,28 @@
+.breadcrumbs {
+    gap: rem(15);
+    white-space: nowrap;
+
+    &__list {
+        display: flex;
+        overflow: auto;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: #5D5D64;
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
+
+    &__slash {
+    }
+
+    &__current {
+    }
+}

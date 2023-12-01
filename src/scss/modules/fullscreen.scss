@@ -1,0 +1,11 @@
+[data-fullscreen] {
+    min-height: 100vh;
+
+    .touch & {
+        min-height: calc(var(--vh, 1vh) * 100);
+
+        @media (max-width: md($mobile)) {
+            transition: height 0.2s;
+        }
+    }
+}

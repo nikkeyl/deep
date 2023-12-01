@@ -1,0 +1,11 @@
+[data-marquee] {
+    $font-size: 18;
+
+    overflow: hidden;
+    padding-top: rem(5);
+    padding-bottom: rem(5);
+    font-size: rem($font-size);
+    white-space: nowrap;
+    color: $color-FFFFFF;
+    background-color: $color-8000FF;
+}

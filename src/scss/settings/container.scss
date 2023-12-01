@@ -1,0 +1,16 @@
+[class*="__container"] {
+    @if $max-width-container > 0 {
+        margin: 0 auto;
+        max-width: rem($max-width-container);
+        box-sizing: content-box;
+    }
+
+    @if $container-padding > 0 {
+        @if $max-width-container > 0 {
+            padding: 0 rem(math.div($container-padding, 2));
+        } @else {
+            @include adaptive-value("padding-left", math.div($container-padding, 2), 15);
+            @include adaptive-value("padding-right", math.div($container-padding, 2), 15);
+        }
+    }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/components/_head.htm',{"title":"Deep"})
+    <body class="page">
+        <div class="scaffold">
+            <main class="content">
+                <section class="home">
+                    <div class="home__inner">
+                        <a href="index.html" class="logo home__logo">
+                            <img src="@content/svg/logo.svg" alt="deep">
+                        </a>
+                        <div class="home__container">
+                            <div class="home__body">
+                                @@include('html/modules/_title.htm',{
+                                "class":" title--white home__title",
+                                "title":"Digital Agency",
+                                "label":"We're Creative",
+                                "tag":"h1"
+                                })
+                                <div data-watch class="text home__text anim-ltr">
+                                    We pride ourselves in delivering world class outputs to all our customers.
+                                </div>
+                                <a href="#" aria-label="get started" data-watch class="button home__button anim-ltr">get started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__image">
+                        <img src="@content/img/home/home.jpg" alt="home">
+                        <div class="socials home__socials">
+                            <a href="#" aria-label="icon facebook" class="socials__icon">
+                                <svg>
+                                    <use href="@content/icons/sprite.svg#svg-facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="icon twitter" class="socials__icon">
+                                <svg>
+                                    <use href="@content/icons/sprite.svg#svg-twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="icon instagram" class="socials__icon">
+                                <svg>
+                                    <use href="@content/icons/sprite.svg#svg-instagram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__body">
+                            @@include('html/modules/_title.htm',{
+                            "class":" title--blue about__title",
+                            "title":"About Agency",
+                            "label":"Who we are",
+                            "tag":"h2"
+                            })
+                            <div class="text about__text">
+                                <p data-watch class="anim-ltr">Our company philosophy is to create the kind of website that most business want: easy to find, stylish and applealing, quick loading, mobile responsive and easy to buy from.</p>
+                                <p data-watch class="anim-ltr">Trained as industrial designers, we've a deep rooted belief in rational function and sustainable aesthetics. Our methodical approach is focused on revealing the essence of each design challenge to allow us to create holistic and durable solutions.</p>
+                            </div>
+                        </div>
+                        <div class="about__image">
+                            <div data-watch class="about__image-ibg anim-rtl">
+                                <img data-src="@content/img/agency/agency.jpg" alt="agency">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="services__container">
+                        <div class="services__body">
+                            @@include('html/modules/_title.htm',{
+                                "class":" services__title",
+                                "title":"Our Services",
+                                "label":"What we do",
+                                "tag":"h3"
+                            })
+                            <div class="services__items">
+                                <div data-watch class="service-item services__item anim-ltr">
+                                    <svg class="service-item__icon">
+                                        <use href="@content/icons/sprite.svg#svg-volume"></use>
+                                    </svg>
+                                    <div class="service-item__title">Online Marketing</div>
+                                    <div class="text text--blue service-item__text">The internet has transformed business marketing. It is the heart of our company.</div>
+                                </div>
+                                <div data-watch class="service-item services__item anim-ltr">
+                                    <svg class="service-item__icon">
+                                        <use href="@content/icons/sprite.svg#svg-layout"></use>
+                                    </svg>
+                                    <div class="service-item__title">Web Development</div>
+                                    <div class="text text--blue service-item__text">Web development is the work involved in developing a Web site for the Internet.</div>
+                                </div>
+                                <div data-watch class="service-item services__item anim-ltr">
+                                    <svg class="service-item__icon">
+                                        <use href="@content/icons/sprite.svg#svg-heart"></use>
+                                    </svg>
+                                    <div class="service-item__title">Website Design</div>
+                                    <div class="text text--blue service-item__text">Web design refers to the design of websites that are displayed on the internet.</div>
+                                </div>
+                                <div data-watch class="service-item services__item anim-ltr">
+                                    <svg class="service-item__icon">
+                                        <use href="@content/icons/sprite.svg#svg-search"></use>
+                                    </svg>
+                                    <div class="service-item__title">SEO Optimization</div>
+                                    <div class="text text--blue service-item__text">SEO is the process of improving the quality and quantity of website traffic to a website.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__images">
+                            <div data-watch class="services__image-ibg anim-rtl">
+                                <img data-src="@content/img/services/man.jpg" alt="man">
+                            </div>
+                            <div data-watch class="services__image-ibg services__image-ibg--small anim-rtl">
+                                <img data-src="@content/img/services/iphone.png" alt="iphone">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio">
+                    <div class="portfolio__container">
+                        @@include('html/modules/_title.htm',{
+                        "class":" title--center portfolio__title",
+                        "title":"Portfolio",
+                        "label":"Our works",
+                        "tag":"h4"
+                        })
+                        <div class="gallery-portfolio">
+                            <div data-watch class="gallery-item gallery-portfolio__item anim-ltr">
+                                <a href="#" data-popup="#popup-one" class="gallery-item__image-ibg">
+                                    <img data-src="@content/img/potrfolio/notebook.jpg" alt="notebook">
+                                </a>
+                            </div>
+                            <div data-watch class="gallery-item gallery-portfolio__item anim-ltr">
+                                <a href="#" data-popup="#popup-two" class="gallery-item__image-ibg">
+                                    <img data-src="@content/img/potrfolio/orange.jpg" alt="orange">
+                                </a>
+                            </div>
+                            <div data-watch class="gallery-item gallery-portfolio__item anim-ltr">
+                                <a href="#" data-popup="#popup-three" class="gallery-item__image-ibg">
+                                    <img data-src="@content/img/potrfolio/flower.jpg" alt="flower">
+                                </a>
+                            </div>
+                            <div data-watch class="gallery-item gallery-portfolio__item anim-ltr">
+                                <a href="#" data-popup="#popup-four" class="gallery-item__image-ibg">
+                                    <img data-src="@content/img/potrfolio/woman.jpg" alt="woman">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="team">
+                    <div class="team__container">
+                        @@include('html/modules/_title.htm',{
+                        "class":" title--center team__title",
+                        "title":"Our Team",
+                        "label":"Meet the staff",
+                        "tag":"h5"
+                        })
+                        <div class="gallery-team">
+                            <div data-watch class="team-item gallery-team__item anim-ltr">
+                                <a href="#" aria-label="human" class="team-item__image-ibg">
+                                    <img data-src="@content/img/team/antonita.jpg" alt="antonita">
+                                </a>
+                                <div class="team-item__body">
+                                    <div class="team-item__info">
+                                        <div class="team-item__name">Antonita Prasentina</div>
+                                        <div class="team-item__profession">Content Writer</div>
+                                    </div>
+                                    <div class="socials socials--small team-item__socials">
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-facebook"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-twitter"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-watch class="team-item gallery-team__item anim-ltr">
+                                <a href="#" aria-label="human" class="team-item__image-ibg">
+                                    <img data-src="@content/img/team/choudri.jpg" alt="choudri">
+                                </a>
+                                <div class="team-item__body">
+                                    <div class="team-item__info">
+                                        <div class="team-item__name">Choudri Malhotra</div>
+                                        <div class="team-item__profession">UI Designer</div>
+                                    </div>
+                                    <div class="socials socials--small team-item__socials">
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-facebook"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-twitter"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-watch class="team-item gallery-team__item anim-ltr">
+                                <a href="#" aria-label="human" class="team-item__image-ibg">
+                                    <img data-src="@content/img/team/malavika.jpg" alt="malavika">
+                                </a>
+                                <div class="team-item__body">
+                                    <div class="team-item__info">
+                                        <div class="team-item__name">Malavika Hegte</div>
+                                        <div class="team-item__profession">Digital Marketer</div>
+                                    </div>
+                                    <div class="socials socials--small team-item__socials">
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-facebook"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-twitter"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-watch class="team-item gallery-team__item anim-ltr">
+                                <a href="#" aria-label="human" class="team-item__image-ibg">
+                                    <img data-src="@content/img/team/anirudh.jpg" alt="anirudh">
+                                </a>
+                                <div class="team-item__body">
+                                    <div class="team-item__info">
+                                        <div class="team-item__name">Anirudh Vedha</div>
+                                        <div class="team-item__profession">Lead Developer</div>
+                                    </div>
+                                    <div class="socials socials--small team-item__socials">
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-facebook"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-twitter"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" aria-label="social icon" class="socials__icon">
+                                            <svg>
+                                                <use href="@content/icons/sprite.svg#svg-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <section class="contact-us">
+                    <div class="contact-us__container">
+                        <div class="contact-us__body">
+                            <div class="contact-us__column">
+                                @@include('html/modules/_title.htm',{
+                                    "class":" contact-us__title",
+                                    "title":"Contact us",
+                                    "label":"Keep in touch",
+                                    "tag":"h6"
+                                })
+                                <form action="#" data-goto-error class="form">
+                                    <input aria-label="your name" data-watch type="text" data-required name="form[]" placeholder="Name" class="form__input anim-ltr">
+                                    <input aria-label="your email" data-watch type="text" data-required="email" name="form[]" placeholder="Email" class="form__input anim-ltr">
+                                    <input aria-label="your subject" data-watch type="text" name="form[]" placeholder="Subject" class="form__input anim-ltr">
+                                    <textarea aria-label="your message" data-watch maxlength="200" name="form[]" placeholder="Subject" class="form__input anim-ltr"></textarea>
+                                    <button aria-label="submit" data-watch type="submit" class="form__button button button--blue anim-ltr">get started</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="contact-us__location">
+                            <div data-watch data-da=".contact-us__body, 991.98" class="contact-us__map anim-rtl">
+                                <iframe title="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3060592708!2d-74.25987430508167!3d40.69714939799659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1671809297678!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="contact-us__items">
+                                <div data-watch class="item-contact-us anim-rtl">
+                                    <div class="item-contact-us__header">
+                                        <svg class="item-contact-us__icon">
+                                            <use href="@content/icons/sprite.svg#svg-phone"></use>
+                                        </svg>
+                                        <div class="item-contact-us__label">Phone</div>
+                                    </div>
+                                    <div class="item-contact-us__body">
+                                        <a href="tel:+918899556645" class="item-contact-us__text">+91 88995 56645</a>
+                                    </div>
+                                </div>
+                                <div data-watch class="item-contact-us anim-rtl">
+                                    <div class="item-contact-us__header">
+                                        <svg class="item-contact-us__icon">
+                                            <use href="@content/icons/sprite.svg#svg-email"></use>
+                                        </svg>
+                                        <div class="item-contact-us__label">Email</div>
+                                    </div>
+                                    <div class="item-contact-us__body">
+                                        <a href="mailto:www@www.com" class="item-contact-us__text">www@www.com</a>
+                                    </div>
+                                </div>
+                                <div data-watch class="item-contact-us anim-rtl">
+                                    <div class="item-contact-us__header">
+                                        <svg class="item-contact-us__icon">
+                                            <use href="@content/icons/sprite.svg#svg-location"></use>
+                                        </svg>
+                                        <div class="item-contact-us__label">Address</div>
+                                    </div>
+                                    <div class="item-contact-us__body">
+                                        <address class="item-contact-us__text">25, 5th Cross Street, Bhommana Halli, Bangalore - 785 956</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/_footer.htm',{})
+        </div>
+        @@include('html/modules/_popup.htm',{})
+        @@include('html/components/_js.htm',{})
+    </body>
+</html>

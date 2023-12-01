@@ -1,0 +1,49 @@
+$backdrop-opacity: 1 !default;
+$lg-toolbar-bg: linear-gradient(0deg,rgb(0 0 0 / 0%),rgb(0 0 0 / 40%)) !default;
+$lg-border-radius-base: 0.125rem !default;
+$lg-theme-highlight: rgb(169 7 7) !default;
+$lg-theme-color: #000 !default;
+
+$lg-icon-bg: rgb(0 0 0 / 45%) !default;
+$lg-icon-color: #999 !default;
+$lg-icon-hover-color: #fff !default;
+
+$lg-counter-color: #e6e6e6 !default;
+$lg-counter-font-size: 1rem !default;
+
+$lg-next-prev-bg: $lg-icon-bg !default;
+$lg-next-prev-color: $lg-icon-color !default;
+$lg-next-prev-hover-color: $lg-icon-hover-color !default;
+
+$lg-toolbar-icon-color: $lg-icon-color !default;
+$lg-toolbar-icon-hover-color: $lg-icon-hover-color !default;
+$lg-toolbar-icon-disabled-opacity: 0.75 !default;
+
+$lg-progress-bar-bg: #333 !default;
+$lg-progress-bar-active-bg: $lg-theme-highlight !default;
+$lg-progress-bar-height: 0.313rem !default;
+
+$lg-path-fonts: "../fonts" !default;
+$lg-path-images: "../images" !default;
+
+$zoom-transition-duration: 0.5s !default;
+
+$lg-sub-html-bg:
+    linear-gradient(180deg,rgb(0 0 0 / 0%),rgb(0 0 0 / 60%)) !default;
+$lg-sub-html-color: #eee !default;
+
+$lg-thumb-toggle-bg: #0d0a0a !default;
+$lg-thumb-toggle-color: $lg-icon-color !default;
+$lg-thumb-bg: #0d0a0a !default;
+$lg-thumb-container-height: 6.25rem;
+
+$zindex-outer: 1050 !default;
+$zindex-progressbar: 1083 !default;
+$zindex-controls: 1080 !default;
+$zindex-toolbar: 1082 !default;
+$zindex-subhtml: 1080 !default;
+$zindex-components: 1080 !default;
+$zindex-pager: 1080 !default;
+$zindex-playbutton: 1080 !default;
+$zindex-item: 1060 !default;
+$zindex-backdrop: 1040 !default;

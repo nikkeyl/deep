@@ -1,0 +1,70 @@
+.menu {
+    &__body {
+        @media (max-width: md($mobile)) {
+            @include wh(100%, 100%);
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 4;
+            overflow: auto;
+            padding-top: rem(80);
+            background-color: $color-FFFFFF;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            &::before {
+                @include pseudo($display-on: 0, $position: fixed);
+
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: rem(70);
+                background-color: $color-FFFFFF;
+            }
+
+            .menu-open & {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__icon {
+        @media (max-width: md($mobile)) {
+        }
+    }
+
+    &__item {
+        @media (max-width: md($mobile)) {
+        }
+    }
+
+    &__link {
+        $font-size: 16;
+
+        font-size: rem($font-size);
+        line-height: math.div(19, $font-size);
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-000000;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: rem(20);
+        row-gap: rem(10);
+
+        @media (max-width: md($mobile)) {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(20);
+        }
+    }
+}

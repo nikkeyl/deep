@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:active {
+    @if $a-focus-active-outline == 1 {
+        outline: none;
+    }
+}
+
+:focus,
+:active {
+    @if $focus-active-outline == 1 {
+        outline: none;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    min-width: $min-width + px;
+}
+
+body {
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: rem($main-font-size);
+    line-height: 1;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    color: $main-font-color;
+    background-color: $main-background-color;
+}
+
+textarea,
+button,
+input {
+    font-family: $main-font-family;
+    font-size: inherit;
+}
+
+button {
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+}

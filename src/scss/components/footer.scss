@@ -1,0 +1,23 @@
+//========================================================================================================================================================//
+.footer {
+    @include adaptive-value("padding-top", 112, 20);
+    @include adaptive-value("padding-bottom", 82, 20);
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+    }
+
+    &__copy {
+        justify-self: center;
+    }
+
+    &__button {
+        justify-self: end;
+    }
+}
+
+//========================================================================================================================================================//
